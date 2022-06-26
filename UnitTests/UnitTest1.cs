@@ -31,7 +31,8 @@ namespace UnitTests
         {
             HomePage homePage = new HomePage();
             homePage.Navigate();
-            Console.WriteLine(Driver.Browser.Url);
+            var userLoggedIn = homePage.Validate().IsUserLoggedIn();
+            Console.WriteLine($"is the user logged in? {userLoggedIn}");
         }
 
         [Test]
