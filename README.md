@@ -3,4 +3,10 @@
 
 Handy stuff.
 
-## How to Use
+## Bookmarks
+
+bookmark class
+bookmarks page object
+bookmarks methods
+- extract all
+- delete by

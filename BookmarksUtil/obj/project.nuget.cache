@@ -1,0 +1,25 @@
+{
+  "version": 2,
+  "dgSpecHash": "1u+1Ot52aNHm1hJ0CBfTjheWqIUQqrPdqwOYg/uznjQANfipVOWOu/Xjqj8vypFOok7pa08aNmUOzOzkg+4xJw==",
+  "success": true,
+  "projectFilePath": "C:\\Users\\kreeh\\Repos\\ao3-utils\\BookmarksUtil\\BookmarksUtil.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\kreeh\\.nuget\\packages\\anglesharp\\0.16.1\\anglesharp.0.16.1.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\microsoft.netcore.platforms\\5.0.0\\microsoft.netcore.platforms.5.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\microsoft.win32.registry\\5.0.0\\microsoft.win32.registry.5.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\netstandard.library\\2.0.0\\netstandard.library.2.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\newtonsoft.json\\12.0.3\\newtonsoft.json.12.0.3.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\nunit\\3.13.3\\nunit.3.13.3.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\nunit.consolerunner\\3.15.0\\nunit.consolerunner.3.15.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\nunit3testadapter\\4.2.1\\nunit3testadapter.4.2.1.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\selenium.support\\4.3.0\\selenium.support.4.3.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\selenium.webdriver\\4.3.0\\selenium.webdriver.4.3.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\sharpziplib\\1.3.3\\sharpziplib.1.3.3.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\system.buffers\\4.5.1\\system.buffers.4.5.1.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\system.security.accesscontrol\\5.0.0\\system.security.accesscontrol.5.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\system.security.principal.windows\\5.0.0\\system.security.principal.windows.5.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\system.text.encoding.codepages\\5.0.0\\system.text.encoding.codepages.5.0.0.nupkg.sha512",
+    "C:\\Users\\kreeh\\.nuget\\packages\\webdrivermanager\\2.13.0\\webdrivermanager.2.13.0.nupkg.sha512"
+  ],
+  "logs": []
+}
