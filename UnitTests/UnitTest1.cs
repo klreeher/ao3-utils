@@ -27,12 +27,27 @@ namespace UnitTests
         }
 
         [Test]
-        public void homePageTests()
+        public void homePageNotLoggedIn()
         {
             HomePage homePage = new HomePage();
             homePage.Navigate();
             var userLoggedIn = homePage.Validate().IsUserLoggedIn();
             Console.WriteLine($"is the user logged in? {userLoggedIn}");
+            Assert.IsFalse(userLoggedIn);
+
+        }
+
+        [Test]
+        public void homePageTosLoad()
+        {
+            HomePage homePage = new HomePage();
+            homePage.Navigate();
+            var userLoggedIn = homePage.Validate().IsUserLoggedIn();
+            Console.WriteLine($"is the user logged in? {userLoggedIn}");
+
+            homePage.Validate().WaitForTosLoad();
+            Console.WriteLine(homePage.Validate().GetTOSText());
+
         }
 
         [Test]

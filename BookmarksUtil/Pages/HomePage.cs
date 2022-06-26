@@ -21,12 +21,30 @@ namespace BookmarksUtil.Pages
 
     public class HomePageElementsMap : BasePageElementMap
     {
-        public By UserInfoList = By.XPath("//ul[@class='user navigation actions']");
+        public By UserInfoLocator = By.XPath("//ul[@class='user navigation actions']");
+        public By TosDivLocator = By.Id("tos_prompt");
+        public By TosAgreeInput = By.Id("tos_agree");
+
+        public IWebElement TosOverlay
+        {
+            get
+            {
+                return this.browser.FindElement(TosDivLocator);
+            }
+        }
+
+        public IWebElement TosAgreeElement
+        {
+            get
+            {
+                return this.browser.FindElement(TosAgreeInput);
+            }
+        }
         public IWebElement UserInfo
         {
             get
             {
-                return this.browser.FindElement(UserInfoList);
+                return this.browser.FindElement(UserInfoLocator);
             }
         }
     }
@@ -44,7 +62,7 @@ namespace BookmarksUtil.Pages
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Element with locator: '" + this.Map.UserInfoList.ToString() + "' was not found.");
+                Console.WriteLine("Element with locator: '" + this.Map.UserInfoLocator.ToString() + "' was not found.");
                 throw;
             }
 
@@ -62,17 +80,37 @@ namespace BookmarksUtil.Pages
             Console.WriteLine(this.Map.UserInfo.Text);
         }
 
+        public string GetTOSText()
+        {
+            var elements = 
+        }
+        public IWebElement WaitForTosLoad()
+        {
+            try
+            {
+                var wait = new WebDriverWait(Driver.Browser, TimeSpan.FromSeconds(30));
+
+                return wait.Until(x => x.FindElement(this.Map.TosDivLocator));
+
+            }
+            catch (NoSuchElementException)
+            {
+                Console.WriteLine("Element with locator: '" + this.Map.TosDivLocator.ToString() + "' was not found.");
+                throw;
+            }
+        }
+
         public IWebElement WaitPageLoad()
         {
             try
             {
                 var wait = new WebDriverWait(Driver.Browser, TimeSpan.FromSeconds(30));
 
-                return wait.Until(x => x.FindElement(this.Map.UserInfoList));
+                return wait.Until(x => x.FindElement(this.Map.UserInfoLocator));
             }
             catch (NoSuchElementException)
             {
-                Console.WriteLine("Element with locator: '" + this.Map.UserInfoList.ToString() + "' was not found.");
+                Console.WriteLine("Element with locator: '" + this.Map.UserInfoLocator.ToString() + "' was not found.");
                 throw;
             }
         }
