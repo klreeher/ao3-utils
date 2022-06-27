@@ -24,29 +24,13 @@ namespace BookmarksUtil.Pages
         public By UserInfoLocator = By.XPath("//ul[@class='user navigation actions']");
         public By TosDivLocator = By.Id("tos_prompt");
         public By TosAgreeInput = By.Id("tos_agree");
+        public By TosAgreeSubmitLocator = By.Id("accept_tos");
 
-        public IWebElement TosOverlay
+        public IWebElement GetPageElement(By locator)
         {
-            get
-            {
-                return this.browser.FindElement(TosDivLocator);
-            }
+            return this.browser.FindElement(locator);
         }
 
-        public IWebElement TosAgreeElement
-        {
-            get
-            {
-                return this.browser.FindElement(TosAgreeInput);
-            }
-        }
-        public IWebElement UserInfo
-        {
-            get
-            {
-                return this.browser.FindElement(UserInfoLocator);
-            }
-        }
     }
 
     public class HomePageValidator : BasePageValidator<HomePageElementsMap>
@@ -77,12 +61,27 @@ namespace BookmarksUtil.Pages
         }
         public void GetUserInfo()
         {
-            Console.WriteLine(this.Map.UserInfo.Text);
+            Console.WriteLine(this.Map.GetPageElement(this.Map.UserInfoLocator).Text);
         }
 
         public string GetTOSText()
         {
-            var elements = 
+            var tosObj = this.Map.GetPageElement(this.Map.TosDivLocator);
+            return (tosObj.Text);
+            
+        }
+
+        public IWebElement GetSubmitButton()
+        {
+            var submit = this.Map.GetPageElement(this.Map.TosAgreeSubmitLocator);
+            return submit;
+        }
+
+        public IWebElement GetTosCheckbox()
+        {
+            var checkbox = this.Map.GetPageElement(this.Map.TosAgreeInput);
+            return checkbox;
+
         }
         public IWebElement WaitForTosLoad()
         {

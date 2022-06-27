@@ -46,7 +46,16 @@ namespace UnitTests
             Console.WriteLine($"is the user logged in? {userLoggedIn}");
 
             homePage.Validate().WaitForTosLoad();
-            Console.WriteLine(homePage.Validate().GetTOSText());
+            var textPara = homePage.Validate().GetTOSText();
+            Console.WriteLine($"{textPara}");
+
+            var box = homePage.Validate().GetTosCheckbox();
+            Assert.IsTrue(box.Enabled);
+
+            box.Click();
+
+            var submit = homePage.Validate().GetSubmitButton;
+            Console.Write(submit.Text());
 
         }
 
